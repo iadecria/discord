@@ -168,7 +168,7 @@ You own the server, the data, and the network it federates into.
 
 ## Installation
 
-The intended way to deploy Backspace is the **interactive installer**. It
+The intended way to deploy QGdeCRIA is the **interactive installer**. It
 configures everything (`.env`, secrets, HTTPS, optional voice) and brings the
 stack up for you. It **auto-detects your environment** and picks one of three
 deployment modes. The default "All-in-One" (below) needs nothing but a host and
@@ -275,7 +275,7 @@ The stack runs three services via Docker Compose:
 
 ## Deployment modes
 
-Homelabs differ. Backspace supports three deployment modes from **one installer**,
+Homelabs differ. QGdeCRIA supports three deployment modes from **one installer**,
 which auto-detects which one fits and, in non-obvious cases, asks. The mode is
 recorded as `DEPLOY_MODE` in `.env`; you can also set it up front for a
 non-interactive install (`DEPLOY_MODE=proxy ./install.sh`).
@@ -593,7 +593,7 @@ uploads, search); only voice/video channels won't connect.
 
 ## Federation
 
-Backspace instances can peer with each other so users on different servers can
+QGdeCRIA instances can peer with each other so users on different servers can
 become friends, DM, and call across instances, while each instance stays
 independently owned and operated. Peering is mutual and authenticated with
 HMAC-signed requests; identities are addressed as `username@instance`. Manage
@@ -620,7 +620,7 @@ Grab the installer for your platform from the
 Every release also carries `.blockmap` and `latest*.yml` files. The auto-updater reads those; they are not downloads.
 
 On first launch the app asks for your instance URL. Enter the address of the
-Backspace server you use (e.g. `https://chat.example.com`).
+QGdeCRIA server you use (e.g. `https://chat.example.com`).
 
 Linux users can also build and install the Flatpak manifest locally. See
 [`flatpak/README.md`](flatpak/README.md) for the commands and sandbox details.
@@ -639,7 +639,7 @@ Cross-platform builds are produced for Windows, macOS, and Linux. See
 
 ## Mobile
 
-Backspace works on mobile today. Just open your instance in a phone browser.
+QGdeCRIA works on mobile today. Just open your instance in a phone browser.
 The UI has a dedicated touch layout (bottom navigation, swipe gestures, and
 full-screen views), and because it ships as an installable **PWA** you can use
 your browser's **Add to Home Screen** to install it as a standalone app: its own
@@ -648,11 +648,11 @@ reconnect.
 
 Native **iOS and Android app-store apps are planned**, once the project gains
 traction and the funding for the developer-program licenses is secured. Until
-then, the installable PWA is the supported way to run Backspace on a phone.
+then, the installable PWA is the supported way to run QGdeCRIA on a phone.
 
 ## Architecture
 
-Backspace is a TypeScript monorepo managed with pnpm workspaces.
+QGdeCRIA is a TypeScript monorepo managed with pnpm workspaces.
 
 ```
 packages/
@@ -676,19 +676,19 @@ packages/
 Every subsystem has a dedicated specification under
 [`docs/systems/`](docs/systems/): database schema, REST API, WebSocket
 protocol, federation, permissions, voice, the design system, and more. **These
-are the reference for how Backspace works**; start there if you want to
+are the reference for how QGdeCRIA works**; start there if you want to
 understand or extend a subsystem.
 
 ## FAQ
 
-**Is Backspace a self-hosted Discord alternative?**
+**Is QGdeCRIA a self-hosted Discord alternative?**
 Yes. It gives you a Discord-style experience (spaces, channels, roles, voice,
 video, screen sharing, DMs, friends) that you run entirely on your own server, so
 you own the data and set the rules.
 
 **How is it different from Revolt, Spacebar, Matrix, or Mumble?**
 See the full [comparison](docs/comparison.md), including where each of those is the
-better choice. In short: Backspace pairs a Discord-style client with a serious
+better choice. In short: QGdeCRIA pairs a Discord-style client with a serious
 voice and screen-share control surface and optional server-to-server federation.
 
 **Does it have screen sharing and high-quality video?**
@@ -710,24 +710,24 @@ Yes, as an installable PWA with a dedicated touch layout. Native iOS and Android
 apps are planned.
 
 **What does "federation" mean here?**
-Independent Backspace instances can peer with each other so users on different
+Independent QGdeCRIA instances can peer with each other so users on different
 servers can be friends, DM, and call across instances, while each server stays
 independently owned. Requests between servers are HMAC-authenticated.
 
 ## Contributing
 
 Contributions are welcome. Please read [`CONTRIBUTING.md`](CONTRIBUTING.md)
-first. Backspace is a single-owner project, so all contributors sign a
+first. QGdeCRIA is a single-owner project, so all contributors sign a
 [Contributor License Agreement](CLA.md), a one-time comment on your pull
 request, handled automatically by a bot. **You keep the copyright to your
 contribution** and grant the maintainer (Jannis Braun) an exclusive license to
-it, which is what lets Backspace be offered under both the AGPL and a commercial
+it, which is what lets QGdeCRIA be offered under both the AGPL and a commercial
 license. You also receive a perpetual license to reuse the specific code you
 wrote in your own other projects.
 
 ## Privacy
 
-Backspace tracks nobody. There is no analytics, no crash reporting, and nothing
+QGdeCRIA tracks nobody. There is no analytics, no crash reporting, and nothing
 phones home on its own. The one exception is opt-in: an admin can let their
 instance send me a once-a-day hello with rounded counts (people, messages, the
 version, whether voice and federation are on) and the country the request came
@@ -775,7 +775,7 @@ a self-hoster should check.
 
 ## License
 
-Backspace is **free and open source software**, licensed under the
+QGdeCRIA is **free and open source software**, licensed under the
 **[GNU Affero General Public License v3.0](LICENSE)** (`AGPL-3.0-only`).
 
 In plain terms:
@@ -783,18 +783,18 @@ In plain terms:
 - Yes: self-host, run, study, and modify it, including commercially and inside a business.
 - Yes: redistribute it and your changes under the same AGPL-3.0 license.
 - Note: if you run a **modified** version as a network service, you must offer your
-  users its complete corresponding source (AGPL § 13). Backspace makes this easy:
+  users its complete corresponding source (AGPL § 13). QGdeCRIA makes this easy:
   set `BACKSPACE_SOURCE_URL` to your fork so the in-app "Source code" link points
   at what you actually run.
 - Note: preserve the copyright and license notices.
 
-**Commercial license.** If the AGPL doesn't fit (embedding Backspace in a
+**Commercial license.** If the AGPL doesn't fit (embedding QGdeCRIA in a
 closed-source product, offering it as a managed service without publishing your
 modifications, or an organization that can't use AGPL software), a separate
 commercial license is available on request. See
 [`LICENSE-COMMERCIAL.md`](LICENSE-COMMERCIAL.md).
 
-> **Our open-source commitment.** Every released version of Backspace is, and
+> **Our open-source commitment.** Every released version of QGdeCRIA is, and
 > will remain, available under the AGPL-3.0. The Contributor License Agreement
 > exists to enable a commercial license and optional enterprise add-ons, **not**
 > to take the open-source edition private. If this project is ever abandoned, or
@@ -803,7 +803,7 @@ commercial license is available on request. See
 
 Copyright © 2026 Jannis Braun. Contributions are made under the
 [Contributor License Agreement](CLA.md): you keep your copyright and grant the
-maintainer an exclusive license, which is what lets Backspace be offered under
+maintainer an exclusive license, which is what lets QGdeCRIA be offered under
 both the AGPL and a commercial license.
 
 "Backspace", the Backspace logo, and app icons are trademarks of Jannis Braun and
