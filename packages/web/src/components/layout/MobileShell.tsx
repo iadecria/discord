@@ -25,7 +25,6 @@ import { MobileGroupDmInfo } from './MobileGroupDmInfo';
 import { FriendsPage } from '../chat/FriendsPage';
 import { ProjectHubPage } from '../projectHub/ProjectHubPage';
 import type { ProjectLinks } from '../../utils/projectLinks';
-import { ExplorePage } from '../chat/ExplorePage';
 import { UserProfileModal } from '../modals/UserProfileModal';
 import {
   GeneralPanel,
@@ -134,7 +133,6 @@ export const mobileScreenMap: Readonly<Record<string, (params?: Record<string, s
   'members': (params) => <MobileMembersScreen params={params} />,
   'group-dm-info': (params) => <MobileGroupDmInfo params={params} />,
   'voice-full': () => <MobileVoiceFullScreen />,
-  'explore': () => <ExplorePage />,
   'backspace': () => <MobileBackspaceScreen />,
   'user-profile': (params) => {
     // Open the user profile modal with the userId from params

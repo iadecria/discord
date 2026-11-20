@@ -50,7 +50,7 @@ interface SidebarItemProps {
   onClick: () => void;
   onContextMenu?: (e: React.MouseEvent) => void;
   type?: 'space' | 'dm' | 'action';
-  actionType?: 'add' | 'join' | 'explore';
+  actionType?: 'add' | 'join';
   hasUnread?: boolean;
   dimmed?: boolean;
   federationBadge?: boolean;
@@ -116,16 +116,12 @@ function SidebarItem({ id, name, icon, avatarColor, active, onClick, onContextMe
 
   const buttonContent = (
     <button onClick={onClick} className={`${getButtonClasses()} ${dimmed ? 'opacity-40 saturate-50' : ''}`} style={backgroundStyle} title={tooltipText ? undefined : name} aria-current={active ? 'page' : undefined}>
-      {type === 'dm' ? (
+{type === 'dm' ? (
         <img src="/icons/logo-mark.svg" alt={t('common:appName')} className="w-5 h-auto" />
       ) : type === 'action' ? (
         actionType === 'add' ? (
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
             <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z" />
-          </svg>
-        ) : actionType === 'explore' ? (
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-5.5-2.5l7.51-3.49L17.5 6.5 9.99 9.99 6.5 17.5zm5.5-6.6c.61 0 1.1.49 1.1 1.1s-.49 1.1-1.1 1.1-1.1-.49-1.1-1.1.49-1.1 1.1-1.1z" />
           </svg>
         ) : (
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -778,12 +774,6 @@ export function SpaceSidebar() {
     navigate('/channels/@me');
   };
 
-  const handleExploreClick = () => {
-    setCurrentSpace(null);
-    setCurrentChannel(null);
-    navigate('/explore');
-  };
-
   // ─── DnD handlers ──────────────────────────────────────────────────────
 
   const handleDragStart = useCallback((e: React.DragEvent, id: string, type: 'space' | 'folder', sourceFolderId?: string) => {
@@ -1234,15 +1224,6 @@ export function SpaceSidebar() {
         onClick={() => openModal('joinSpace')}
         type="action"
         actionType="join"
-      />
-
-      <SidebarItem
-        id="explore"
-        name={t('spaces:sidebar.exploreSpaces')}
-        active={location.pathname === '/explore'}
-        onClick={handleExploreClick}
-        type="action"
-        actionType="explore"
       />
 
       {transferModalSpaceId && (

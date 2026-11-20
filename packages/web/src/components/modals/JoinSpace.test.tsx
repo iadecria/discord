@@ -141,7 +141,6 @@ describe('JoinSpaceModal', () => {
     renderModal();
     expect(screen.getByText(/Discover spaces to join/i)).toBeInTheDocument();
     expect(useExploreStore.getState().fetchSpaces).toHaveBeenCalled();
-    expect(screen.getByText('Browse all in Explore')).toBeInTheDocument();
   });
 
   it('renders live preview cards for unjoined discoverable spaces', () => {
@@ -155,25 +154,6 @@ describe('JoinSpaceModal', () => {
     useUIStore.setState({ activeModal: 'joinSpace' });
     renderModal();
     expect(screen.getByText('Preview Space')).toBeInTheDocument();
-  });
-
-  it('Browse all navigates to /explore on desktop and closes the modal', async () => {
-    const user = userEvent.setup();
-    useUIStore.setState({ activeModal: 'joinSpace', isMobile: false });
-    renderModal();
-    await user.click(screen.getByText('Browse all in Explore'));
-    expect(mockNavigate).toHaveBeenCalledWith('/explore');
-    expect(useUIStore.getState().activeModal).toBeNull();
-  });
-
-  it('Browse all uses the mobile screen stack when on mobile', async () => {
-    const user = userEvent.setup();
-    const pushMobileScreen = vi.fn();
-    useUIStore.setState({ activeModal: 'joinSpace', isMobile: true, pushMobileScreen });
-    renderModal();
-    await user.click(screen.getByText('Browse all in Explore'));
-    expect(pushMobileScreen).toHaveBeenCalledWith('explore');
-    expect(mockNavigate).not.toHaveBeenCalledWith('/explore');
   });
 
   it('shows loading skeletons while discovery is fetching with no spaces yet', () => {
@@ -202,7 +182,7 @@ describe('JoinSpaceModal', () => {
     useUIStore.setState({ activeModal: 'joinSpace' });
     renderModal();
     expect(screen.getByText(/discovery is turned off/i)).toBeInTheDocument();
-    expect(screen.queryByText('Browse all in Explore')).not.toBeInTheDocument();
+    expect(screen.queryByText(/Discover spaces to join/i)).not.toBeInTheDocument();
     // invite path still available
     expect(screen.getByPlaceholderText('e.g. abc123 or https://instance.com/join/abc123')).toBeInTheDocument();
   });

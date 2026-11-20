@@ -56,9 +56,9 @@ describe('App routes', () => {
     expect(screen.getByTestId('layout')).toHaveTextContent(/^\/backspace$/);
   });
 
-  it('still serves /explore inside the app layout', () => {
+  it('redirects the retired /explore route to the DM home', () => {
     renderAt('/explore');
-    expect(screen.getByTestId('layout')).toHaveTextContent(/^\/explore$/);
+    expect(screen.getByTestId('layout')).toHaveTextContent(/^\/channels\/@me$/);
   });
 
   it('sends a signed-out visitor of /backspace to the login page', () => {

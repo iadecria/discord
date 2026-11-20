@@ -47,9 +47,6 @@ export function JoinSpaceModal() {
   const user = useAuthStore((s) => s.user);
   const navigate = useNavigate();
 
-  const isMobile = useUIStore((s) => s.isMobile);
-  const pushMobileScreen = useUIStore((s) => s.pushMobileScreen);
-
   const discoverySpaces = useExploreStore((s) => s.spaces);
   const discoveryLoading = useExploreStore((s) => s.isLoading);
   const discoveryEnabled = useExploreStore((s) => s.discoveryEnabled);
@@ -72,12 +69,6 @@ export function JoinSpaceModal() {
     () => discoverySpaces.filter((s) => !s.joined).slice(0, 6),
     [discoverySpaces],
   );
-
-  const handleBrowseExplore = () => {
-    closeModal();
-    if (isMobile) pushMobileScreen('explore');
-    else navigate('/explore');
-  };
 
   const handlePreviewJoinSuccess = (spaceId: string) => {
     closeModal();
@@ -271,17 +262,6 @@ export function JoinSpaceModal() {
                   ))}
                 </div>
               )}
-
-              <button
-                type="button"
-                onClick={handleBrowseExplore}
-                className="mt-3 w-full py-2 flex items-center justify-center gap-1.5 text-sm font-medium text-accent-primary hover:bg-accent-primary/10 rounded-lg transition-colors"
-              >
-                {t('spaces:join.browseExplore')}
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                </svg>
-              </button>
             </div>
           ) : (
             <div className="mb-1 p-2.5 rounded-lg bg-accent-amber/10 border border-accent-amber/30 text-[13px] text-accent-amber">

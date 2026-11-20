@@ -6,15 +6,14 @@
  * selected at once. The space rail's `@me` item reads it too, to stay active
  * on `/backspace`.
  *
- * `/explore` and `/backspace` are pages in the main area and win over a
- * lingering channel id. Anywhere else the Friends view is what shows when no
- * channel is open, and with a channel open none of the three is selected.
+ * `/backspace` is a page in the main area and wins over a lingering channel
+ * id. Anywhere else the Friends view is what shows when no channel is open,
+ * and with a channel open none of the items is selected.
  */
 
-export type HomeNavItem = 'friends' | 'explore' | 'backspace';
+export type HomeNavItem = 'friends' | 'backspace';
 
 export function activeHomeNavItem(pathname: string, currentChannelId: string | null): HomeNavItem | null {
-  if (pathname === '/explore') return 'explore';
   if (pathname === '/backspace') return 'backspace';
   if (currentChannelId === null) return 'friends';
   return null;

@@ -88,14 +88,7 @@ export function App() {
             path="/join/:inviteCode"
             element={<JoinPage />}
           />
-          <Route
-            path="/explore"
-            element={
-              <ProtectedRoute>
-                <AppLayout />
-              </ProtectedRoute>
-            }
-          />
+          <Route path="/explore" element={<Navigate to="/channels/@me" replace />} />
           <Route
             path="/backspace"
             element={

@@ -2,10 +2,6 @@ import { describe, it, expect } from 'vitest';
 import { activeHomeNavItem } from './homeNav';
 
 describe('activeHomeNavItem', () => {
-  it('selects Explore on /explore', () => {
-    expect(activeHomeNavItem('/explore', null)).toBe('explore');
-  });
-
   it('selects Backspace on /backspace', () => {
     expect(activeHomeNavItem('/backspace', null)).toBe('backspace');
   });
@@ -23,7 +19,6 @@ describe('activeHomeNavItem', () => {
   });
 
   it('keeps the page items selected even when a stale channel id lingers', () => {
-    expect(activeHomeNavItem('/explore', 'channel-1')).toBe('explore');
     expect(activeHomeNavItem('/backspace', 'channel-1')).toBe('backspace');
   });
 

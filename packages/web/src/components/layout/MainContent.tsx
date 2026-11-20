@@ -10,7 +10,6 @@ import { VoiceGrid } from '../voice/VoiceGrid';
 import { VoiceControlBar } from '../voice/VoiceControlBar';
 import { VoiceChatPanel } from '../voice/VoiceChatPanel';
 import { FriendsPage } from '../chat/FriendsPage';
-import { ExplorePage } from '../chat/ExplorePage';
 import { ProjectHubPage } from '../projectHub/ProjectHubPage';
 import { Avatar } from '../ui/Avatar';
 import { AvatarStack } from '../ui/AvatarStack';
@@ -72,7 +71,6 @@ export function MainContent() {
   const connectionError = useVoiceStore((s) => s.connectionError);
   const showDms = useUIStore((s) => s.showDms);
   const location = useLocation();
-  const isExplorePage = location.pathname === '/explore';
   const isProjectHubPage = location.pathname === '/backspace';
   // The DM call's conversation as this client opens it (never the call's key).
   const { dmChannelId: dmCallChannel } = useActiveDmCall();
@@ -191,11 +189,9 @@ export function MainContent() {
   const channel = channels.find(c => c.id === currentChannelId);
   const isVoiceChannel = channel?.type === 'voice';
 
-  if (showDms || isExplorePage || isProjectHubPage || !currentSpaceId) {
+  if (showDms || isProjectHubPage || !currentSpaceId) {
     if (!currentChannelId) {
-      return isExplorePage ? (
-        <ExplorePage />
-      ) : isProjectHubPage ? (
+      return isProjectHubPage ? (
         <ProjectHubPage />
       ) : (
         <FriendsPage />

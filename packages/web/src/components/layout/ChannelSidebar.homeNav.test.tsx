@@ -27,7 +27,7 @@ import { useUIStore } from '../../stores/uiStore';
 import { ChannelSidebar } from './ChannelSidebar';
 
 const SELECTED = 'bg-interactive-selected';
-const LABELS = { friends: 'Friends', explore: 'Explore', backspace: 'QGdeCRIA' } as const;
+const LABELS = { friends: 'Friends', backspace: 'QGdeCRIA' } as const;
 
 function LocationProbe() {
   return <div data-testid="location">{useLocation().pathname}</div>;
@@ -63,11 +63,6 @@ beforeEach(() => {
 });
 
 describe('ChannelSidebar home items', () => {
-  it('selects only Explore on /explore', () => {
-    renderAt('/explore');
-    expect(selectedItems()).toEqual(['explore']);
-  });
-
   it('selects only Backspace on /backspace', () => {
     renderAt('/backspace');
     expect(selectedItems()).toEqual(['backspace']);

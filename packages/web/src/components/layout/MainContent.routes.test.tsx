@@ -12,7 +12,6 @@ vi.mock('../../audio/AudioManager', () => ({
 }));
 
 // The pages themselves have their own tests; here only which one renders matters.
-vi.mock('../chat/ExplorePage', () => ({ ExplorePage: () => <div data-testid="page">explore</div> }));
 vi.mock('../chat/FriendsPage', () => ({ FriendsPage: () => <div data-testid="page">friends</div> }));
 vi.mock('../projectHub/ProjectHubPage', () => ({ ProjectHubPage: () => <div data-testid="page">backspace</div> }));
 
@@ -41,11 +40,6 @@ describe('MainContent home pages', () => {
   it('renders the Backspace page on /backspace', () => {
     renderAt('/backspace');
     expect(screen.getByTestId('page')).toHaveTextContent('backspace');
-  });
-
-  it('still renders Explore on /explore', () => {
-    renderAt('/explore');
-    expect(screen.getByTestId('page')).toHaveTextContent('explore');
   });
 
   it('renders Friends on the DM home', () => {

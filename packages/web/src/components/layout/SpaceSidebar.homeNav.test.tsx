@@ -40,13 +40,6 @@ describe('SpaceSidebar @me item', () => {
   it('is active on /backspace, which is reached from the DM sidebar', () => {
     renderAt('/backspace');
     expect(railButton('Direct Messages')).toHaveAttribute('aria-current', 'page');
-    expect(railButton('Explore Spaces')).not.toHaveAttribute('aria-current');
-  });
-
-  it('is not active on /explore, where the Explore action is', () => {
-    renderAt('/explore');
-    expect(railButton('Direct Messages')).not.toHaveAttribute('aria-current');
-    expect(railButton('Explore Spaces')).toHaveAttribute('aria-current', 'page');
   });
 
   it('is active on the DM home', () => {
