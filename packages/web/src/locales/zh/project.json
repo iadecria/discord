@@ -1,10 +1,10 @@
 {
   "nav": {
-    "label": "Backspace",
-    "updatedDot": "Backspace 已更新"
+    "label": "QGdeCRIA",
+    "updatedDot": "QGdeCRIA 已更新"
   },
   "header": {
-    "title": "Backspace",
+    "title": "QGdeCRIA",
     "tagline": "可以自行托管的开源聊天应用。"
   },
   "whatsNew": {
@@ -15,8 +15,8 @@
     "action": "阅读发布说明"
   },
   "community": {
-    "title": "加入 Backspace 社区",
-    "body": "与 Backspace 的开发者交流，提出问题并分享反馈。",
+    "title": "加入 QGdeCRIA 社区",
+    "body": "与 QGdeCRIA 的开发者交流，提出问题并分享反馈。",
     "join": "加入",
     "open": "打开",
     "pending": "申请已发送",
@@ -26,7 +26,7 @@
   },
   "support": {
     "title": "支持本项目",
-    "body": "用于支付将 Backspace 应用上架应用商店所需的开发者账号费用，以及项目运营的其他开支。",
+    "body": "用于支付将 QGdeCRIA 应用上架应用商店所需的开发者账号费用，以及项目运营的其他开支。",
     "action": "在 Ko-fi 上支持"
   },
   "insights": {
@@ -42,7 +42,7 @@
   },
   "host": {
     "title": "托管您自己的实例",
-    "body": "在您自己的服务器上运行 Backspace，并邀请您想邀请的人。",
+    "body": "在您自己的服务器上运行 QGdeCRIA，并邀请您想邀请的人。",
     "action": "阅读安装指南"
   },
   "desktop": {

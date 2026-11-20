@@ -1,8 +1,8 @@
 <div align="center">
 
-<img src="packages/web/public/icons/logo.png" alt="Backspace" width="160" />
+<img src="packages/web/public/icons/logo.png" alt="QGdeCRIA" width="160" />
 
-# Backspace
+# QGdeCRIA
 
 **A self-hosted communication platform you own. Text, voice, video, and federation.**
 
@@ -20,10 +20,10 @@
 
 ---
 
-Backspace is a self-hosted, open-source Discord alternative: a Discord-style chat
+QGdeCRIA is a self-hosted, open-source Discord alternative: a Discord-style chat
 platform you run on your own hardware. Spaces, channels, roles, voice and video,
 screen sharing, direct messages, friends, file sharing, and message search. On top
-of that, **server-to-server federation** lets independent Backspace instances talk
+of that, **server-to-server federation** lets independent QGdeCRIA instances talk
 to each other while each stays under its own control.
 
 It is **free and open source** under the **GNU AGPL-3.0**, and dual-licensed: a
@@ -31,16 +31,16 @@ commercial license is available if the AGPL doesn't fit your use. See
 [License](#license) for the details.
 
 > **Project status** <a name="project-status"></a>
-> Backspace 1.x. Stable, self-hostable, and actively developed. The release
+> QGdeCRIA 1.x. Stable, self-hostable, and actively developed. The release
 > badge above tracks the current version.
 
-## What makes Backspace different
+## What makes QGdeCRIA different
 
 Self-hosted chat usually forces a trade-off: gaming-grade voice and video, *or* a
 polished Discord-style experience, *or* federation between independent servers.
 Rarely all three, and rarely with the fine-grained media controls people expect.
 
-Backspace does all three at once:
+QGdeCRIA does all three at once:
 
 - **Voice and video with a real control surface.** This goes past a screen-share
   button. Choose resolution, frame rate, codec (VP9 or H.264), and

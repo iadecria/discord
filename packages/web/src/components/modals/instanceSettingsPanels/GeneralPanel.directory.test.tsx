@@ -115,7 +115,7 @@ describe('GeneralPanel discovery ladder', () => {
     expect(rung(GLOBAL)).toBeInTheDocument();
     expect(screen.getByText('Spaces here are listed nowhere. Invite links still work.')).toBeInTheDocument();
     expect(screen.getByText('Spaces appear in Explore for people on this instance and on instances connected to it.')).toBeInTheDocument();
-    expect(screen.getByText('Each space can then be manually listed in the global Backspace directory from its own Discovery settings.')).toBeInTheDocument();
+    expect(screen.getByText('Each space can then be manually listed in the global QGdeCRIA directory from its own Discovery settings.')).toBeInTheDocument();
     expect(screen.getAllByRole('radio')).toHaveLength(3);
   });
 
@@ -666,7 +666,7 @@ describe('GeneralPanel discovery ladder without a directory endpoint', () => {
 
     expect(rung(GLOBAL)).toBeDisabled();
     expect(screen.getByText(/nothing here can be listed globally/)).toBeInTheDocument();
-    expect(screen.queryByText('Each space can then be manually listed in the global Backspace directory from its own Discovery settings.')).not.toBeInTheDocument();
+    expect(screen.queryByText('Each space can then be manually listed in the global QGdeCRIA directory from its own Discovery settings.')).not.toBeInTheDocument();
     // The rungs that still do something stay available.
     expect(rung(INVITE)).toBeEnabled();
     expect(rung(LOCAL)).toBeEnabled();
@@ -704,7 +704,7 @@ describe('GeneralPanel discovery ladder without a directory endpoint', () => {
     await act(async () => {});
 
     expect(rung(GLOBAL)).toBeEnabled();
-    expect(screen.getByText('Each space can then be manually listed in the global Backspace directory from its own Discovery settings.')).toBeInTheDocument();
+    expect(screen.getByText('Each space can then be manually listed in the global QGdeCRIA directory from its own Discovery settings.')).toBeInTheDocument();
     expect(screen.queryByText(/nothing here can be listed globally/)).not.toBeInTheDocument();
   });
 
@@ -731,7 +731,7 @@ describe('GeneralPanel discovery ladder without a directory endpoint', () => {
 });
 
 describe('GeneralPanel listing note', () => {
-  const NOTE = 'Turning this on does not list any spaces by itself. Each space still has to switch on "List in the global Backspace directory" in its Discovery settings.';
+  const NOTE = 'Turning this on does not list any spaces by itself. Each space still has to switch on "List in the global QGdeCRIA directory" in its Discovery settings.';
   const SHOW = 'Show me where';
   const SAVE_AND_SHOW = 'Save and show me where';
   const MANAGE = permissionsToString(PermissionBits.MANAGE_SPACE);

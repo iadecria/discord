@@ -21,7 +21,7 @@ import { useInstanceStore, type ConnectedInstance } from '../../stores/instanceS
 import { api, HttpError, type BackspaceApiClient } from '../../api/client';
 import { describeError } from '../../i18n/errors';
 
-const SWITCH = 'List in the global Backspace directory';
+const SWITCH = 'List in the global QGdeCRIA directory';
 const ADMIN_OFF = 'Your instance administrator has to allow global listing.';
 // The same fact in the administrator's own voice, with the way out of it.
 const ADMIN_OFF_SELF = 'Global listing is not allowed on this instance.';

@@ -215,7 +215,7 @@
     },
     "outer": {
       "title": "Äußerer Space",
-      "subtitle": "Communities in ganz Backspace",
+      "subtitle": "Communities in ganz QGdeCRIA",
       "empty": "Da draußen ist noch nichts. Spaces, die sich ins Verzeichnis eintragen, erscheinen hier.",
       "noMatches": "Im Äußeren Space passt nichts zu deiner Suche.",
       "showMore": "Mehr anzeigen",
@@ -327,8 +327,8 @@
         }
       },
       "directory": {
-        "label": "Ins globale Backspace-Verzeichnis eintragen",
-        "hint": "Zeigt diesen Space auf jeder Backspace-Instanz im Äußeren Space.",
+        "label": "Ins globale QGdeCRIA-Verzeichnis eintragen",
+        "hint": "Zeigt diesen Space auf jeder QGdeCRIA-Instanz im Äußeren Space.",
         "notConfigured": "Diese Instanz ist nicht so eingerichtet, dass sie ein Verzeichnis erreicht; dieser Space kann also nirgends eingetragen werden.",
         "adminOff": "Die Instanzverwaltung muss erst das globale Eintragen erlauben.",
         "adminOffSelf": "Globales Eintragen ist auf dieser Instanz nicht erlaubt.",

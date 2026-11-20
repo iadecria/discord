@@ -1,10 +1,10 @@
 {
   "nav": {
-    "label": "Backspace",
-    "updatedDot": "O Backspace foi atualizado"
+    "label": "QGdeCRIA",
+    "updatedDot": "O QGdeCRIA foi atualizado"
   },
   "header": {
-    "title": "Backspace",
+    "title": "QGdeCRIA",
     "tagline": "Chat de código aberto que você mesmo pode hospedar."
   },
   "whatsNew": {
@@ -15,8 +15,8 @@
     "action": "Ler as notas de versão"
   },
   "community": {
-    "title": "Entre na comunidade do Backspace",
-    "body": "Converse com as pessoas que desenvolvem o Backspace, tire dúvidas e compartilhe feedback.",
+    "title": "Entre na comunidade do QGdeCRIA",
+    "body": "Converse com as pessoas que desenvolvem o QGdeCRIA, tire dúvidas e compartilhe feedback.",
     "join": "Entrar",
     "open": "Abrir",
     "pending": "Solicitação enviada",
@@ -26,7 +26,7 @@
   },
   "support": {
     "title": "Apoie o projeto",
-    "body": "Ajuda a pagar as licenças de desenvolvedor que levam os apps do Backspace para as lojas de aplicativos, além dos outros custos de manter o projeto.",
+    "body": "Ajuda a pagar as licenças de desenvolvedor que levam os apps do QGdeCRIA para as lojas de aplicativos, além dos outros custos de manter o projeto.",
     "action": "Apoiar no Ko-fi"
   },
   "insights": {
@@ -42,7 +42,7 @@
   },
   "host": {
     "title": "Hospede sua própria instância",
-    "body": "Rode o Backspace no seu próprio servidor e convide quem você quiser.",
+    "body": "Rode o QGdeCRIA no seu próprio servidor e convide quem você quiser.",
     "action": "Ler o guia de instalação"
   },
   "desktop": {

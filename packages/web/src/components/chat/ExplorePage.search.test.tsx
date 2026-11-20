@@ -173,7 +173,7 @@ describe('ExplorePage search and the Outer Space gate', () => {
     expect(screen.getByText('Inner Space')).toBeInTheDocument();
     expect(screen.getByText('Spaces on your instances')).toBeInTheDocument();
     await waitFor(() => expect(screen.getByText('Outer Space')).toBeInTheDocument());
-    expect(screen.getByText('Communities across Backspace')).toBeInTheDocument();
+    expect(screen.getByText('Communities across QGdeCRIA')).toBeInTheDocument();
     expect(instanceInfo).toHaveBeenCalledTimes(1);
   });
 

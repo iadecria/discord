@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Backspace — аналог Discord на своём сервере, открытый код</title>
-<meta name="description" content="Backspace — аналог Discord с открытым исходным кодом, который вы держите на собственном сервере: голос и видео, демонстрация экрана до 4K при 120 кадрах в секунду, федерация между серверами. Лицензия AGPL-3.0. Разворачивается в Docker, работает на Raspberry Pi." />
+<title>QGdeCRIA — аналог Discord на своём сервере, открытый код</title>
+<meta name="description" content="QGdeCRIA — аналог Discord с открытым исходным кодом, который вы держите на собственном сервере: голос и видео, демонстрация экрана до 4K при 120 кадрах в секунду, федерация между серверами. Лицензия AGPL-3.0. Разворачивается в Docker, работает на Raspberry Pi." />
 <link rel="canonical" href="https://backspacechat.com/ru/" />
 <link rel="alternate" hreflang="en" href="https://backspacechat.com/" />
 <link rel="alternate" hreflang="ru" href="https://backspacechat.com/ru/" />
@@ -14,14 +14,14 @@
 
 <!-- Open Graph / social preview -->
 <meta property="og:type" content="website" />
-<meta property="og:title" content="Backspace — аналог Discord на своём сервере, открытый код" />
+<meta property="og:title" content="QGdeCRIA — аналог Discord на своём сервере, открытый код" />
 <meta property="og:description" content="Замена Discord, которую вы полностью держите у себя: голос, видео в высоком качестве, демонстрация экрана до 4K при 120 кадрах в секунду и федерация между серверами. AGPL-3.0." />
 <meta property="og:url" content="https://backspacechat.com/ru/" />
 <meta property="og:image" content="https://backspacechat.com/social-preview.png" />
 <meta property="og:locale" content="ru_RU" />
 <meta property="og:locale:alternate" content="en_US" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Backspace: аналог Discord на своём сервере" />
+<meta name="twitter:title" content="QGdeCRIA: аналог Discord на своём сервере" />
 <meta name="twitter:description" content="Голос, видео в высоком качестве, демонстрация экрана до 4K при 120 кадрах в секунду и федерация. Свой сервер, открытый код." />
 <meta name="twitter:image" content="https://backspacechat.com/social-preview.png" />
 
@@ -30,7 +30,7 @@
 {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  "name": "Backspace",
+  "name": "QGdeCRIA",
   "applicationCategory": "CommunicationApplication",
   "operatingSystem": "Linux, Windows, macOS, Web",
   "inLanguage": "ru",
@@ -51,7 +51,7 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Backspace — это аналог Discord на своём сервере?",
+      "name": "QGdeCRIA — это аналог Discord на своём сервере?",
       "acceptedAnswer": { "@type": "Answer", "text": "Да. Всё устроено привычно по Discord: пространства, каналы, роли, голос, видео, демонстрация экрана, личные сообщения и друзья. Всё это работает целиком на вашем сервере, поэтому данные принадлежат вам и правила устанавливаете вы." }
     },
     {
@@ -62,7 +62,7 @@
     {
       "@type": "Question",
       "name": "Что здесь означает федерация?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Независимые серверы Backspace можно связать друг с другом, чтобы пользователи с разных серверов могли дружить, переписываться и звонить друг другу, при этом каждый сервер остаётся в собственности того, кто его держит. Запросы между серверами подписываются HMAC. Это связь Backspace с Backspace, а не Matrix и не ActivityPub." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Независимые серверы QGdeCRIA можно связать друг с другом, чтобы пользователи с разных серверов могли дружить, переписываться и звонить друг другу, при этом каждый сервер остаётся в собственности того, кто его держит. Запросы между серверами подписываются HMAC. Это связь QGdeCRIA с QGdeCRIA, а не Matrix и не ActivityPub." }
     },
     {
       "@type": "Question",
@@ -85,7 +85,7 @@
 
 <header class="nav">
   <div class="wrap nav-in">
-    <a class="brand" href="#top"><span class="logo-mark" aria-hidden="true"></span><span>Backspace</span></a>
+    <a class="brand" href="#top"><span class="logo-mark" aria-hidden="true"></span><span>QGdeCRIA</span></a>
     <a class="nav-link" href="#voice">Голос</a>
     <a class="nav-link" href="#federation">Федерация</a>
     <a class="nav-link" href="#install">Установка</a>
@@ -106,7 +106,7 @@
       <span class="hero-tag">открытый код, AGPL-3.0 · <b>ваше железо, ваши правила</b></span>
       <h1>Групповой чат, который живёт на вашем железе.</h1>
       <p class="hero-sub">
-        Backspace — аналог Discord с открытым исходным кодом, который вы держите у себя: пространства,
+        QGdeCRIA — аналог Discord с открытым исходным кодом, который вы держите у себя: пространства,
         роли, голос и видео, демонстрация экрана до 4K при 120 кадрах в секунду и федерация между
         серверами, каждый из которых остаётся у своего владельца.
       </p>
@@ -118,7 +118,7 @@
     </div>
 
     <!-- The living window: a hand-built replica of the real client -->
-    <figure class="win" id="win" aria-label="Воссозданное окно приложения Backspace: переписка в пространстве на собственном сервере и подключённый голосовой канал.">
+    <figure class="win" id="win" aria-label="Воссозданное окно приложения QGdeCRIA: переписка в пространстве на собственном сервере и подключённый голосовой канал.">
       <div class="strip" aria-hidden="true">
         <span class="tile logo"><span class="logo-mark" aria-hidden="true"></span></span>
         <span class="sep"></span>
@@ -227,7 +227,7 @@
       <h2>Пульт управления, а не одна кнопка «выключить микрофон».</h2>
       <p class="sec-copy">
         Большинство мессенджеров дают вам один ползунок громкости и кодек, который вы никогда не
-        увидите. Backspace отдаёт вам весь тракт. Когда трансляция начинает подтормаживать,
+        увидите. QGdeCRIA отдаёт вам весь тракт. Когда трансляция начинает подтормаживать,
         сведения о соединении показывают, что именно происходит на линии, и вы устраняете
         неполадку, а не гадаете о ней.
       </p>
@@ -243,7 +243,7 @@
     </div>
     <div class="reveal">
       <div class="voice-media">
-        <img class="shot" src="../assets/voice-grid.webp" alt="Голосовой канал Backspace: сетка из девяти плиток с камерами и демонстрациями экрана, рядом список каналов и список участников." width="1584" height="930" loading="lazy" />
+        <img class="shot" src="../assets/voice-grid.webp" alt="Голосовой канал QGdeCRIA: сетка из девяти плиток с камерами и демонстрациями экрана, рядом список каналов и список участников." width="1584" height="930" loading="lazy" />
         <img class="panel" src="../assets/stream-settings.webp" alt="Панель настроек трансляции: предустановки разрешения от 540p до 4K, включая исходное, частота кадров от 30 до 120, режим содержимого, выбор кодека между VP9 и аппаратным H.264, ползунок битрейта и переключатель системного звука." width="524" height="1062" loading="lazy" />
       </div>
       <p class="media-cap">настоящие скриншоты: звонок на девять человек и панель настроек трансляции.</p>
@@ -258,7 +258,7 @@
       <div class="ch-label ch-lavender">федерация</div>
       <h2>Независимые серверы, общий разговор.</h2>
       <p class="sec-copy">
-        Свяжите два сервера Backspace, и их пользователи смогут дружить, переписываться и звонить
+        Свяжите два сервера QGdeCRIA, и их пользователи смогут дружить, переписываться и звонить
         друг другу, а каждый сервер останется собственностью того, кто его держит. Запросы между
         серверами <strong>подписываются HMAC</strong>, секреты меняются по расписанию, которое задаёте вы,
         а пиринг можно отозвать в любой момент. Здесь нет ни каталога, ни центрального узла: два
@@ -267,7 +267,7 @@
     </div>
     <div class="fed-grid">
       <div class="reveal">
-        <div class="fed-diagram" role="img" aria-label="Схема: два сервера Backspace, closet.mara.dev и rack.jonas.net, обмениваются запросами с подписью HMAC напрямую друг с другом.">
+        <div class="fed-diagram" role="img" aria-label="Схема: два сервера QGdeCRIA, closet.mara.dev и rack.jonas.net, обмениваются запросами с подписью HMAC напрямую друг с другом.">
           <div class="node">
             <div class="nh"><i></i>closet.mara.dev</div>
             <div class="no">принадлежит mara и работает у неё</div>
@@ -289,7 +289,7 @@
           </div>
         </div>
         <p class="sec-copy" style="margin-top:34px">
-          Честные ограничения: это связь Backspace с Backspace, а не Matrix и не ActivityPub, и она
+          Честные ограничения: это связь QGdeCRIA с QGdeCRIA, а не Matrix и не ActivityPub, и она
           ещё молодая. Если вам нужен зрелый открытый стандарт федерации уже сегодня, Matrix подойдёт
           лучше, и в <a href="https://github.com/TheZwiss/backspace/blob/main/docs/comparison.md">нашем сравнении</a>
           так и написано.
@@ -364,12 +364,12 @@
     <div class="ch-label ch-peach">прежде-чем-ставить-звезду</div>
     <h2>Прочитайте это, прежде чем ставить звезду.</h2>
     <p class="sec-copy">
-      Backspace ещё молод, и инструменты стоит выбирать с открытыми глазами. Три вещи, которых он сегодня не даёт:
+      QGdeCRIA ещё молод, и инструменты стоит выбирать с открытыми глазами. Три вещи, которых он сегодня не даёт:
     </p>
     <ul class="honest-list">
       <li><b>Никакой экосистемы Discord.</b> Здесь нет магазина ботов и армии интеграций. Вы получаете платформу, а не толпу.</li>
       <li><b>На телефоне это PWA.</b> Оно ставится на домашний экран и работает хорошо, но нативные приложения для iOS и Android пока в планах.</li>
-      <li><b>Федерация молодая.</b> Она связывает Backspace с Backspace. Если нужен зрелый открытый стандарт, охватывающий много экосистем, лучше взять Matrix.</li>
+      <li><b>Федерация молодая.</b> Она связывает QGdeCRIA с QGdeCRIA. Если нужен зрелый открытый стандарт, охватывающий много экосистем, лучше взять Matrix.</li>
     </ul>
   </div>
 </section>
@@ -413,7 +413,7 @@
     <div class="table-wrap" tabindex="0">
       <table>
         <thead>
-          <tr><th>Возможность</th><th class="bs">Backspace</th><th>Discord</th><th>Revolt</th><th>Matrix</th><th>Mumble</th></tr>
+          <tr><th>Возможность</th><th class="bs">QGdeCRIA</th><th>Discord</th><th>Revolt</th><th>Matrix</th><th>Mumble</th></tr>
         </thead>
         <tbody>
           <tr><td>Можно поднять у себя</td><td class="yes bs">Да</td><td class="no">Нет</td><td class="yes">Да</td><td class="yes">Да</td><td class="yes">Да</td></tr>
@@ -435,7 +435,7 @@
     <h2>Вопросы, которые задают на самом деле.</h2>
     <div class="faq">
       <details open>
-        <summary>Backspace — это аналог Discord на своём сервере?</summary>
+        <summary>QGdeCRIA — это аналог Discord на своём сервере?</summary>
         <p>Да. Всё устроено привычно по Discord: пространства, каналы, роли, голос, видео, демонстрация экрана, личные сообщения и друзья. Всё это работает целиком на вашем сервере, поэтому данные принадлежат вам и правила устанавливаете вы.</p>
       </details>
       <details>
@@ -444,7 +444,7 @@
       </details>
       <details>
         <summary>Что здесь означает федерация?</summary>
-        <p>Независимые серверы Backspace можно связать друг с другом, чтобы пользователи с разных серверов могли дружить, переписываться и звонить друг другу, при этом каждый сервер остаётся в собственности того, кто его держит. Запросы между серверами подписываются HMAC. Это связь Backspace с Backspace, а не Matrix и не ActivityPub.</p>
+        <p>Независимые серверы QGdeCRIA можно связать друг с другом, чтобы пользователи с разных серверов могли дружить, переписываться и звонить друг другу, при этом каждый сервер остаётся в собственности того, кто его держит. Запросы между серверами подписываются HMAC. Это связь QGdeCRIA с QGdeCRIA, а не Matrix и не ActivityPub.</p>
       </details>
       <details>
         <summary>Можно ли запустить его на Raspberry Pi?</summary>
@@ -473,7 +473,7 @@
 
 <footer>
   <div class="wrap foot-in">
-    <span>Backspace — свободное программное обеспечение под <a href="https://github.com/TheZwiss/backspace/blob/main/LICENSE">GNU AGPL-3.0</a>, с возможностью коммерческой двойной лицензии.</span>
+    <span>QGdeCRIA — свободное программное обеспечение под <a href="https://github.com/TheZwiss/backspace/blob/main/LICENSE">GNU AGPL-3.0</a>, с возможностью коммерческой двойной лицензии.</span>
     <span class="fl">
       <a href="https://github.com/TheZwiss/backspace">GitHub</a>
       <a href="https://github.com/TheZwiss/backspace/blob/main/docs/comparison.md">Сравнение</a>

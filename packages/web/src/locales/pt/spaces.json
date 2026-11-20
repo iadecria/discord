@@ -217,7 +217,7 @@
     },
     "outer": {
       "title": "Espaço Externo",
-      "subtitle": "Comunidades de todo o Backspace",
+      "subtitle": "Comunidades de todo o QGdeCRIA",
       "empty": "Ainda não há nada por lá. Os espaços que aderirem ao diretório aparecem aqui.",
       "noMatches": "Nada no Espaço Externo corresponde à sua pesquisa.",
       "showMore": "Mostrar mais",
@@ -330,8 +330,8 @@
         }
       },
       "directory": {
-        "label": "Listar no diretório global do Backspace",
-        "hint": "Mostra este espaço no Espaço Externo de todas as instâncias do Backspace.",
+        "label": "Listar no diretório global do QGdeCRIA",
+        "hint": "Mostra este espaço no Espaço Externo de todas as instâncias do QGdeCRIA.",
         "notConfigured": "Esta instância não está configurada para acessar um diretório, então listar este espaço não chegaria a nenhum.",
         "adminOff": "O administrador da sua instância precisa permitir a listagem global.",
         "adminOffSelf": "A listagem global não é permitida nesta instância.",

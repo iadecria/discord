@@ -32,7 +32,7 @@ const REMOTE = 'https://community.example';
 function docSpace(overrides: Partial<DirectoryDocumentSpace> = {}): DirectoryDocumentSpace {
   return {
     id: 'space-1',
-    name: 'Backspace',
+    name: 'QGdeCRIA',
     description: 'Where the project is discussed.',
     icon: null,
     banner: null,
@@ -48,7 +48,7 @@ function doc(overrides: Partial<DirectoryDocument> = {}): DirectoryDocument {
   return {
     schema: 1,
     origin: REMOTE,
-    instance: { name: 'Backspace Community', federatedRegistrationOpen: true, version: '1.5.1' },
+    instance: { name: 'QGdeCRIA Community', federatedRegistrationOpen: true, version: '1.5.1' },
     spaces: [docSpace()],
     ...overrides,
   };
@@ -57,7 +57,7 @@ function doc(overrides: Partial<DirectoryDocument> = {}): DirectoryDocument {
 function taggedSpace(id: string, origin: string): TaggedSpace {
   return {
     id,
-    name: 'Backspace',
+    name: 'QGdeCRIA',
     icon: null,
     banner: null,
     avatarColor: null,
@@ -91,7 +91,7 @@ function jsonResponse(body: unknown, status = 200): Response {
 
 // ── parseDirectoryListing ────────────────────────────────────────────────────
 
-const INSTANCE = { name: 'Backspace Community', federatedRegistrationOpen: true };
+const INSTANCE = { name: 'QGdeCRIA Community', federatedRegistrationOpen: true };
 
 function listed(space: DirectoryDocumentSpace = docSpace()) {
   return { ok: true, instance: INSTANCE, space };
@@ -106,7 +106,7 @@ describe('parseDirectoryListing', () => {
   });
 
   it('reads the instance without a version', () => {
-    const raw = { ...doc(), instance: { name: 'Backspace Community', federatedRegistrationOpen: true } };
+    const raw = { ...doc(), instance: { name: 'QGdeCRIA Community', federatedRegistrationOpen: true } };
     expect(parseDirectoryListing(raw, 'space-1')).toEqual(listed());
   });
 
@@ -154,7 +154,7 @@ describe('parseDirectoryListing', () => {
     const rest: Partial<DirectoryDocument> = doc();
     delete rest.instance;
     expect(parseDirectoryListing(rest, 'space-1')).toEqual(unreachable);
-    expect(parseDirectoryListing({ ...rest, instance: 'Backspace' }, 'space-1')).toEqual(unreachable);
+    expect(parseDirectoryListing({ ...rest, instance: 'QGdeCRIA' }, 'space-1')).toEqual(unreachable);
   });
 
   it('says unreachable for an instance with a missing name or a non-boolean registration flag', () => {
@@ -277,8 +277,8 @@ describe('CommunityCard', () => {
     render(<CommunityCard target={remoteTarget} />);
     expect(fetchMock).not.toHaveBeenCalled();
     expect(fetchMyRequests).toHaveBeenCalledTimes(1);
-    expect(screen.getByRole('article', { name: 'Join the Backspace community' })).toHaveTextContent(
-      'Talk to the people who build Backspace, ask questions and share feedback.',
+    expect(screen.getByRole('article', { name: 'Join the QGdeCRIA community' })).toHaveTextContent(
+      'Talk to the people who build QGdeCRIA, ask questions and share feedback.',
     );
   });
 
@@ -386,7 +386,7 @@ describe('CommunityCard', () => {
       entry: {
         ...docSpace(),
         origin: REMOTE,
-        instanceName: 'Backspace Community',
+        instanceName: 'QGdeCRIA Community',
         federatedRegistrationOpen: true,
       },
     });
@@ -402,7 +402,7 @@ describe('CommunityCard', () => {
       entry: {
         ...docSpace(),
         origin: REMOTE,
-        instanceName: 'Backspace Community',
+        instanceName: 'QGdeCRIA Community',
         federatedRegistrationOpen: true,
       },
     });

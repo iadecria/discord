@@ -395,7 +395,7 @@ export const userSpaceLayout = sqliteTable('user_space_layout', {
 
 export const instanceSettings = sqliteTable('instance_settings', {
   id: integer('id').primaryKey().default(1),
-  instanceName: text('instance_name').default('Backspace'),
+  instanceName: text('instance_name').default('QGdeCRIA'),
   workerId: integer('worker_id'),
   instanceId: text('instance_id'),
   discoveryEnabled: integer('discovery_enabled').notNull().default(1),
@@ -436,7 +436,7 @@ export const instanceSettings = sqliteTable('instance_settings', {
   directoryLastError: text('directory_last_error'),
   /** People on this instance see spaces from other instances in Explore. */
   directoryBrowseEnabled: integer('directory_browse_enabled').notNull().default(1),
-  /** The web client's Backspace page shows the Support card. Hides only that card; the server does nothing else with it. */
+  /** The web client's QGdeCRIA page shows the Support card. Hides only that card; the server does nothing else with it. */
   supportCardEnabled: integer('support_card_enabled', { mode: 'boolean' }).notNull().default(true),
   /** First-boot timestamp (ms); backfilled by ensureDefaults, so non-null after boot. */
   installedAt: integer('installed_at'),

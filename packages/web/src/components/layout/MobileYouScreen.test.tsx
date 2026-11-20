@@ -26,7 +26,7 @@ import { useUIStore } from '../../stores/uiStore';
 import { MobileYouScreen } from './MobileYouScreen';
 import { HubUpdateDot } from '../projectHub/HubUpdateDot';
 
-const DOT = 'Backspace was updated';
+const DOT = 'QGdeCRIA was updated';
 
 const self: User = {
   id: 'user-self',
@@ -70,7 +70,7 @@ describe('MobileYouScreen: Backspace row', () => {
   it('renders a Backspace row that pushes the backspace screen', () => {
     render(<MobileYouScreen />);
 
-    fireEvent.click(row('Backspace'));
+    fireEvent.click(row('QGdeCRIA'));
 
     expect(pushMobileScreen).toHaveBeenCalledTimes(1);
     expect(pushMobileScreen).toHaveBeenCalledWith('backspace');
@@ -82,7 +82,7 @@ describe('MobileYouScreen: Backspace row', () => {
     render(<MobileYouScreen />);
 
     const dot = screen.getByRole('img', { name: DOT });
-    expect(row('Backspace')).toContainElement(dot);
+    expect(row('QGdeCRIA')).toContainElement(dot);
     expect(screen.getAllByRole('img', { name: DOT })).toHaveLength(1);
   });
 
@@ -102,7 +102,7 @@ describe('MobileYouScreen: Backspace row', () => {
     render(<MobileYouScreen />);
 
     expect(screen.queryByRole('img', { name: DOT })).toBeNull();
-    expect(within(row('Backspace')).queryByRole('img')).toBeNull();
+    expect(within(row('QGdeCRIA')).queryByRole('img')).toBeNull();
   });
 
   it('puts the dot on no other row', () => {

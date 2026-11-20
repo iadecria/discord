@@ -87,7 +87,7 @@ const EMPTY: ProjectLinks = { ...PROJECT_LINKS, funding: null, community: null }
 
 const CARD_ORDER = [
   "What's new",
-  'Join the Backspace community',
+  'Join the QGdeCRIA community',
   'Support the project',
   'Insights',
   'Report a bug or request a feature',
@@ -300,7 +300,7 @@ describe('ProjectHubPage: cards', () => {
     renderPage({ links: EMPTY });
 
     await waitFor(() => expect(card("What's new")).toHaveTextContent('1.5.1'));
-    expect(screen.queryByRole('article', { name: 'Join the Backspace community' })).toBeNull();
+    expect(screen.queryByRole('article', { name: 'Join the QGdeCRIA community' })).toBeNull();
     expect(fetchMyRequests).not.toHaveBeenCalled();
     expect(cardNames()).toEqual([
       "What's new",
@@ -316,7 +316,7 @@ describe('ProjectHubPage: cards', () => {
 
     renderPage({ links: FILLED });
 
-    const community = await screen.findByRole('article', { name: 'Join the Backspace community' });
+    const community = await screen.findByRole('article', { name: 'Join the QGdeCRIA community' });
     expect(within(community).getByRole('button', { name: 'Join' })).toBeEnabled();
   });
 
@@ -414,7 +414,7 @@ describe('ProjectHubPage: frame', () => {
 
     renderPage();
 
-    expect(screen.getByRole('heading', { level: 1, name: 'Backspace' })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { level: 1, name: 'QGdeCRIA' })).toBeInTheDocument();
     expect(screen.getByText('Open-source chat you can host yourself.')).toBeInTheDocument();
     expect(document.querySelector('img[src="/icons/logo-mark.svg"]')).not.toBeNull();
   });
@@ -433,7 +433,7 @@ describe('ProjectHubPage: frame', () => {
     renderPage({ showTopBar: false });
 
     expect(screen.queryByRole('button', { name: 'Toggle Member List' })).toBeNull();
-    expect(screen.getByRole('heading', { level: 1, name: 'Backspace' })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { level: 1, name: 'QGdeCRIA' })).toBeInTheDocument();
   });
 
   it('names this instance and its domain and offers its source', async () => {

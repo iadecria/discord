@@ -23,8 +23,8 @@
   --txt2: #a0a0aa;
   --txt3: #6d6d7c;
   --txt4: #5c5c68;
-  --primary: #7c6cf6;
-  --primary-hover: #6b5ce0;
+  --primary: #3BCB9A;
+  --primary-hover: #34B388;
   --mint: #86efac;
   --peach: #fca5a5;
   --lavender: #c4b5fd;
@@ -45,7 +45,7 @@
  * publishes the family with exactly two subsets, and there is no Cyrillic cut
  * of it to vendor. On a Russian page that leaves every Cyrillic character
  * falling through to the next family in the stack while the Latin ones around
- * it -- "Backspace", "Discord", "4K", and every digit -- stay in DM Sans, which
+ * it -- "QGdeCRIA", "Discord", "4K", and every digit -- stay in DM Sans, which
  * is two typefaces inside one sentence and, in the stat tiles, a number in one
  * face directly above its label in another.
  *

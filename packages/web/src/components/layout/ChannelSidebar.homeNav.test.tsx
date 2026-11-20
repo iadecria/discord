@@ -27,7 +27,7 @@ import { useUIStore } from '../../stores/uiStore';
 import { ChannelSidebar } from './ChannelSidebar';
 
 const SELECTED = 'bg-interactive-selected';
-const LABELS = { friends: 'Friends', explore: 'Explore', backspace: 'Backspace' } as const;
+const LABELS = { friends: 'Friends', explore: 'Explore', backspace: 'QGdeCRIA' } as const;
 
 function LocationProbe() {
   return <div data-testid="location">{useLocation().pathname}</div>;
@@ -98,13 +98,13 @@ describe('ChannelSidebar home items', () => {
   it('shows the updated dot when the instance updated since the last visit', () => {
     hubState.state = 'updated';
     renderAt('/channels/@me');
-    const dot = screen.getByRole('img', { name: 'Backspace was updated' });
+    const dot = screen.getByRole('img', { name: 'QGdeCRIA was updated' });
     expect(homeItem(LABELS.backspace)).toContainElement(dot);
   });
 
   it.each<HubUpdateState>(['unknown', 'first-run', 'current'])('shows no dot when the state is %s', (state) => {
     hubState.state = state;
     renderAt('/channels/@me');
-    expect(screen.queryByRole('img', { name: 'Backspace was updated' })).toBeNull();
+    expect(screen.queryByRole('img', { name: 'QGdeCRIA was updated' })).toBeNull();
   });
 });

@@ -1,7 +1,7 @@
 {
   "general": {
     "title": "General",
-    "description": "Configure your Backspace instance. These settings affect all users.",
+    "description": "Configure your QGdeCRIA instance. These settings affect all users.",
     "instanceName": {
       "label": "Instance Name",
       "description": "The name shown on the login page and to federated instances.",
@@ -21,7 +21,7 @@
         },
         "global": {
           "label": "Allow global listing",
-          "description": "Each space can then be manually listed in the global Backspace directory from its own Discovery settings."
+          "description": "Each space can then be manually listed in the global QGdeCRIA directory from its own Discovery settings."
         }
       },
       "unconfigured": "This instance is not configured to reach a directory, so nothing here can be listed globally."
@@ -56,9 +56,9 @@
       "unavailable": "This instance is not configured to reach a directory, so there is nothing to show."
     },
     "supportCard": {
-      "label": "Backspace page",
+      "label": "QGdeCRIA page",
       "toggleLabel": "Show the Support card",
-      "toggleDescription": "Shows a card on the Backspace page that links to the project's Ko-fi page. Turning it off hides only that card."
+      "toggleDescription": "Shows a card on the QGdeCRIA page that links to the project's Ko-fi page. Turning it off hides only that card."
     },
     "gif": {
       "label": "GIF Search",
@@ -345,7 +345,7 @@
     "title": "Updates",
     "badge": {
       "settingsAriaLabel": "Settings, instance update available",
-      "toast": "Backspace {{version}} is available for this instance",
+      "toast": "QGdeCRIA {{version}} is available for this instance",
       "toastAction": "View"
     },
     "description": "What this instance is running, and how to move it forward.",
@@ -363,11 +363,11 @@
     },
     "available": {
       "label": "Available",
-      "version": "Backspace {{version}} is available",
+      "version": "QGdeCRIA {{version}} is available",
       "released": "Released {{date}} · ",
       "releaseNotes": "Release notes",
       "fromInstallDir": "From your install directory:",
-      "scriptDescription": "Takes a database snapshot, fetches the new image, and restarts only the Backspace container. If the new version does not come up healthy, or comes up still running the old code, it puts back the version you are on now.",
+      "scriptDescription": "Takes a database snapshot, fetches the new image, and restarts only the QGdeCRIA container. If the new version does not come up healthy, or comes up still running the old code, it puts back the version you are on now.",
       "noScript": "I do not have update.sh",
       "manualIntro": "update.sh ships from 1.0.5 onward. On a git checkout, <code>git pull</code> brings it in. Otherwise run the steps by hand, after taking a snapshot with <code>./backup.sh</code>.",
       "prebuiltInstall": "Prebuilt-image install:",

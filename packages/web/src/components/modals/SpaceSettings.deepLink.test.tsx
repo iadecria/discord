@@ -21,7 +21,7 @@ import { useUIStore } from '../../stores/uiStore';
 import { api } from '../../api/client';
 import { PermissionBits, permissionsToString } from '../../utils/permissions';
 
-const SWITCH = 'List in the global Backspace directory';
+const SWITCH = 'List in the global QGdeCRIA directory';
 
 const limits: InstanceStreamingLimits = {
   maxBitrateKbps: 20000,

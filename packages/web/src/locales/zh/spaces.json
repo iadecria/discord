@@ -213,7 +213,7 @@
     },
     "outer": {
       "title": "外部空间",
-      "subtitle": "遍布 Backspace 的社区",
+      "subtitle": "遍布 QGdeCRIA 的社区",
       "empty": "外面还什么都没有。加入目录的空间会显示在这里。",
       "noMatches": "外部空间中没有匹配您搜索的空间。",
       "showMore": "显示更多",
@@ -324,8 +324,8 @@
         }
       },
       "directory": {
-        "label": "列入全局 Backspace 目录",
-        "hint": "在每个 Backspace 实例的外部空间中显示此空间。",
+        "label": "列入全局 QGdeCRIA 目录",
+        "hint": "在每个 QGdeCRIA 实例的外部空间中显示此空间。",
         "notConfigured": "本实例未配置可访问的目录，因此此空间无法列入任何目录。",
         "adminOff": "需要实例管理员先允许列入全局目录。",
         "adminOffSelf": "本实例不允许列入全局目录。",

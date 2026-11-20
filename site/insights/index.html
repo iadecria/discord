@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Backspace insights: repository traffic and growth</title>
-<meta name="description" content="Traffic, growth and referral figures for the Backspace repository, plus opt-in usage pings from self-hosted instances, collected daily into a public archive and rendered from a single static bundle." />
+<title>QGdeCRIA insights: repository traffic and growth</title>
+<meta name="description" content="Traffic, growth and referral figures for the QGdeCRIA repository, plus opt-in usage pings from self-hosted instances, collected daily into a public archive and rendered from a single static bundle." />
 <link rel="canonical" href="https://backspacechat.com/insights/" />
 <!-- Declares the archive as a dataset rather than as prose, and names its
      machine-readable distribution explicitly. Without this a crawler reads the
@@ -16,12 +16,12 @@
 {
   "@context": "https://schema.org",
   "@type": "Dataset",
-  "name": "Backspace repository traffic and growth archive",
-  "description": "Daily archive of the Backspace repository's GitHub traffic, stars, forks, contributors and releases. GitHub discards repository traffic data after 14 days; this archive records it once per day and retains it indefinitely. Every figure is measured, never estimated; a value that was not measured is recorded as absent rather than as zero. It also carries opt-in usage pings from self-hosted Backspace instances: rounded counts of instances, active users, versions, countries and client kinds, published as a lower bound because an instance that never opts in is not counted.",
+  "name": "QGdeCRIA repository traffic and growth archive",
+  "description": "Daily archive of the QGdeCRIA repository's GitHub traffic, stars, forks, contributors and releases. GitHub discards repository traffic data after 14 days; this archive records it once per day and retains it indefinitely. Every figure is measured, never estimated; a value that was not measured is recorded as absent rather than as zero. It also carries opt-in usage pings from self-hosted QGdeCRIA instances: rounded counts of instances, active users, versions, countries and client kinds, published as a lower bound because an instance that never opts in is not counted.",
   "url": "https://backspacechat.com/insights/",
   "license": "https://www.gnu.org/licenses/agpl-3.0.html",
   "isAccessibleForFree": true,
-  "creator": { "@type": "Organization", "name": "Backspace" },
+  "creator": { "@type": "Organization", "name": "QGdeCRIA" },
   "measurementTechnique": "GitHub REST API, collected once daily by a scheduled job and committed to a public git branch. The usage figures come from a daily ping sent by each self-hosted instance whose operator opted in, received by a public endpoint and archived on the same branch; they cover only those instances.",
   "variableMeasured": [
     "page views", "unique visitors", "repository clones", "unique cloners",
@@ -81,8 +81,8 @@
   --txt2: #a0a0aa;
   --txt3: #6d6d7c;
   --txt4: #5c5c68;
-  --primary: #7c6cf6;
-  --primary-hover: #6b5ce0;
+  --primary: #3BCB9A;
+  --primary-hover: #34B388;
   --mint: #86efac;
   --peach: #fca5a5;
   --lavender: #c4b5fd;
@@ -710,7 +710,7 @@ footer a:hover { color: var(--txt); }
 
 <header class="nav">
   <div class="wrap nav-in">
-    <a class="brand" href="../"><span class="logo-mark" aria-hidden="true"></span><span>Backspace</span> <span class="brand-sub">insights</span></a>
+    <a class="brand" href="../"><span class="logo-mark" aria-hidden="true"></span><span>QGdeCRIA</span> <span class="brand-sub">insights</span></a>
     <a class="nav-link" href="#reach">Reach</a>
     <a class="nav-link" href="#following">Following</a>
     <a class="nav-link" href="#adoption">Adoption</a>
@@ -965,7 +965,7 @@ footer a:hover { color: var(--txt); }
       <h3>Opt-in pings</h3>
       <p class="sec-copy">
         Most of this page measures this repository on GitHub. The opt-in figures in the
-        Adoption group measure something else: the Backspace instances people actually run.
+        Adoption group measure something else: the QGdeCRIA instances people actually run.
         A self-hosted instance can choose to send one small ping a day, and most do not, so
         <strong>every one of those figures is a lower bound</strong> rather than a total. An instance
         that never opts in is invisible, and an instance is counted only once it has reported
@@ -1013,7 +1013,7 @@ footer a:hover { color: var(--txt); }
 
 <footer>
   <div class="wrap foot-in">
-    <span>Backspace is free software under the <a href="https://github.com/TheZwiss/backspace/blob/main/LICENSE">GNU AGPL-3.0</a>, with a commercial dual-license option.</span>
+    <span>QGdeCRIA is free software under the <a href="https://github.com/TheZwiss/backspace/blob/main/LICENSE">GNU AGPL-3.0</a>, with a commercial dual-license option.</span>
     <span class="fl">
       <a href="../">Home</a>
       <a href="https://github.com/TheZwiss/backspace">GitHub</a>

@@ -2,8 +2,8 @@
   position: relative;
   display: inline-block;
   flex: none;
-  width: 16px;
-  height: 21px;
+  width: 24px;
+  height: 13.6px;
   vertical-align: middle;
 }
 
@@ -17,8 +17,8 @@
 }
 
 .brand .logo-mark {
-  width: 20px;
-  height: 26px;
+  width: 30px;
+  height: 17px;
 }
 
 .brand > span:not(.logo-mark) {
@@ -31,8 +31,8 @@
 }
 
 .strip .tile.logo .logo-mark {
-  width: 68%;
-  height: 88%;
+  width: 82%;
+  height: 60%;
 }
 
 .strip .tile.logo .logo-mark::after {

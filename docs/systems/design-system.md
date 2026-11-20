@@ -13,7 +13,7 @@ Fonts: DM Sans by default; Inter for the Russian UI; the platform CJK stack for 
 - Quiet glass (felt, not seen). No decorative gradients. Minimal shadows.
 - Two-material system: solid matte panels for content (75%), frosted glass bubbles for persistent controls (25%)
 - `prefers-reduced-transparency` → fall back to solid surfaces
-- NOT a Discord clone — Backspace has its own visual identity
+- NOT a Discord clone — QGdeCRIA has its own visual identity
 
 ## Settings organization
 
@@ -130,18 +130,18 @@ them, never hand-edited.
 
 The brand splits by surface, not by file type. UI surfaces (the site
 header, the in-app sidebar tile, favicons, and all tray icons) stay
-flat: a single flat fill, `#7c6cf6` on dark grounds or `#ffffff` on a
-lavender tile or badge shape, no gradient, stroke, glow, shadow, blur or
+flat: a single flat fill, `#3BCB9A` on dark grounds or `#ffffff` on a
+green tile or badge shape, no gradient, stroke, glow, shadow, blur or
 blend anywhere the mark appears. The app-icon family, meaning every
 output where the OS shows this app as one launchable icon (dock,
 taskbar, Start menu, Alt-Tab, PWA install, iOS home screen, the
 maskable Android icon), is dimensional: the contributor's original
-badge composition, recoloured to the lavender system. The badge is a
+badge composition, recoloured to the green system. The badge is a
 rounded rectangle with a corner radius of 22.37% of its side (Apple's
 own template radius, not the contributor's original ~36% squircle) on
 a vertical gradient from `#2a2740` (top) to `#12101d` (bottom), called
 "plum", carrying a drop shadow, an inner shadow and a soft-light stroke
-overlay; the glyph inside it is a white-to-`#7c6cf6` gradient, not a
+overlay; the glyph inside it is a white-to-`#3BCB9A` gradient, not a
 flat fill.
 
 On macOS specifically, the badge also sits on Apple's icon grid: the
@@ -158,12 +158,12 @@ those platforms apply their own icon framing. See `macIconPng` in
 
 | Master | Feeds |
 |--------|-------|
-| `app-icon.svg` | App icon outputs above 32px: the dimensional badge (plum gradient, filters, stroke overlay, 22.37%-radius corners) plus the white-to-`#7c6cf6` gradient glyph |
+| `app-icon.svg` | App icon outputs above 32px: the dimensional badge (plum gradient, filters, stroke overlay, 22.37%-radius corners) plus the white-to-`#3BCB9A` gradient glyph |
 | `app-icon-small.svg` | App icon outputs at 16/32px (bolder, simplified mark, same dimensional badge geometry) |
 | `mark-icon.svg` | The bare gradient glyph alone, transparent, no badge: the PWA maskable icon's inner mark and the social preview |
-| `mark.svg` | Standalone flat-lavender renders on dark UI-surface grounds |
+| `mark.svg` | Standalone flat-green renders on dark UI-surface grounds |
 | `mark-small.svg` | Favicons, the colour tray icons (Windows `.ico`, Linux PNG; glyph inset in the tray cell and centred by alpha centroid), and any standalone render at 32px or smaller (flat) |
-| `mark-mono-light.svg` | `packages/web/public/icons/logo-mark.svg` (byte copy): the flat white glyph, for the in-app sidebar's lavender home tile |
+| `mark-mono-light.svg` | `packages/web/public/icons/logo-mark.svg` (byte copy): the flat white glyph, for the in-app sidebar's green home tile |
 | `mark-tray.svg` | The macOS menu-bar template tray icon: a 16px silhouette on an 18x22 canvas (36x44 @2x), centred by alpha centroid so it sits and spaces like the system's own menu-bar glyphs |
 | `mark-mono-dark.svg` | Mono silhouette master; no pipeline output today |
 
@@ -176,7 +176,7 @@ rasteriser, not per lockfile, so a Chrome or font upgrade can shift it
 even with no dependency change. See `scripts/gen-icons.README.md` and
 `docs/systems/desktop.md` for the full matrix.
 
-The brand primary is `#7c6cf6`. It is a web/app/desktop primary, not a
+The brand primary is `#3BCB9A`. It is a web/app/desktop primary, not a
 pastel accent, and is exposed as `--accent-primary` (see Color Palette
 above). The plum gradient (`#2a2740`/`#12101d`) exists only as the
 app-icon family's ground; it is not a UI surface colour and has no CSS

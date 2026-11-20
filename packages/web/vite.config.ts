@@ -18,9 +18,9 @@ export default defineConfig({
       registerType: 'prompt',
       includeAssets: ['icons/favicon-32.png', 'icons/favicon-16.png', 'icons/apple-touch-icon.png'],
       manifest: {
-        name: 'Backspace',
-        short_name: 'Backspace',
-        description: 'The self-hosted Discord and TeamSpeak alternative. HD voice, video, and screen share — open source and free (AGPL-3.0).',
+        name: 'QGdeCRIA',
+        short_name: 'QGdeCRIA',
+        description: 'QGdeCRIA — voz, vídeo e tela compartilhada para jogar com os amigos',
         display: 'standalone',
         start_url: '/',
         theme_color: '#0b0b10',
